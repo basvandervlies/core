@@ -1,9 +1,9 @@
-cfengine3 (3.6.0~7+nmu1) UNRELEASED; urgency=low
+cfengine3 (3.6.0-8+nmu1) UNRELEASED; urgency=low
 
   [ Brian Bennett ]
   * Non-maintainer upload.
   * New upstream release.
-  * New 3.6.x release 4 Juni 2014
+  * New 3.6.x release 5 Juni 2014
 
  -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Wed, 28 May 2014 11:54:50 +0200
 
