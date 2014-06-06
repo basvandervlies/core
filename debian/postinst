@@ -44,7 +44,7 @@ upgrade_cfengine () {
         cp $WORKDIR/.modules.cf-moved/* $WORKDIR/modules
     fi
 
-    if [ -d $WORKDIR//in ]
+    if [ -d $WORKDIR/bin ]
     then
         rm -rf $WORKDIR/bin
         ln -s /usr/sbin $WORKDIR/bin

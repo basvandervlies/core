@@ -1,9 +1,17 @@
-cfengine3 (3.6.0~7+nmu1) UNRELEASED; urgency=low
+cfengine3 (3.6.0~10+nmu1) UNRELEASED; urgency=low
+
+  * New daily release 6 June
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Fri, 06 Jun 2014 09:05:59 +0200
+
+cfengine3 (3.6.0~9+nmu1) UNRELEASED; urgency=low
 
   [ Brian Bennett ]
   * Non-maintainer upload.
   * New upstream release.
   * New 3.6.x release 4 Juni 2014
+  * New 3.6.x release 5 Juni 2014
+  * must be a ~ in version else make shlibs fails with new symbols
 
  -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Wed, 28 May 2014 11:54:50 +0200
 
