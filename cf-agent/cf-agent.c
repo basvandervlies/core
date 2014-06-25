@@ -265,8 +265,8 @@ int main(int argc, char *argv[])
     }
 
     // only note class usage when default policy is run
-    Nova_NoteClassUsage(ctx);
-    Nova_NoteVarUsageDB(ctx);
+    Nova_NoteClassUsage(ctx, config);
+    Nova_NoteVarUsageDB(ctx, config);
     Nova_TrackExecution(config->input_file);
     PurgeLocks();
     BackupLockDatabase();
@@ -281,12 +281,11 @@ int main(int argc, char *argv[])
     }
 
     EndAudit(ctx, CFA_BACKGROUND);
-    EvalContextDestroy(ctx);
 
     GenerateDiffReports(config);
     Nova_NoteAgentExecutionPerformance(config->input_file, start);
 
-    GenericAgentConfigDestroy(config);
+    GenericAgentFinalize(ctx, config);
 
 #ifdef HAVE_LIBXML2
         xmlCleanupParser();
