@@ -4,7 +4,7 @@
 # see: dh_installdeb(1)
 
 #set -e
-set -x
+#set -x
 
 # summary of how this script can be called:
 #        * <postinst> `configure' <most-recently-configured-version>
@@ -37,13 +37,20 @@ make_key () {
 }
 
 upgrade_cfengine () {
-    if [ ! -d $WORKDIR/modules ]
+
+    ## modules has its own directory
+    # no symlink anymore
+    if [  -h $WORKDIR/modules ]
     then
-        mv $WORKDIR/modules $WORKDIR/.modules.cf-moved
-        mkdir $WORKDIR/modules
-        cp $WORKDIR/.modules.cf-moved/* $WORKDIR/modules
+        rm $WORKDIR/modules
+        if [ =d /etc/cfengine3/modules ]
+        then
+            cp -a /etc/cfengine3/modules .
+        fi
     fi
 
+    ## cfengine bin dir is symlinked to /usr/sbin
+    #
     if [ -d $WORKDIR/bin ]
     then
         rm -rf $WORKDIR/bin

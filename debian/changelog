@@ -1,3 +1,27 @@
+cfengine3 (3.6.0~16+nmu1) UNRELEASED; urgency=low
+
+  * New 3.6.x merge 16 july 2014
+
+ -- Bas van der Vlies <bas@test3.irc.sara.nl.irc.sara.nl>  Wed, 16 Jul 2014 14:09:07 +0200
+
+cfengine3 (3.6.0~15+nmu1) UNRELEASED; urgency=low
+
+  * New release 8 July 2014 cfengine 3.6.x branch
+
+ -- root <root@test3.irc.sara.nl.irc.sara.nl>  Tue, 08 Jul 2014 08:59:47 +0200
+
+cfengine3 (3.6.0~14+nmu1) UNRELEASED; urgency=low
+
+  * New release 7 July 2014 cfengine 3.6.x branch 
+
+ -- root <root@test3.irc.sara.nl.irc.sara.nl>  Mon, 07 Jul 2014 09:10:40 +0200
+
+cfengine3 (3.6.0~13+nmu1) UNRELEASED; urgency=low
+
+  *  New 3.6.x release specified as 3.6.1 
+
+ -- root <root@test3.irc.sara.nl.irc.sara.nl>  Wed, 25 Jun 2014 16:21:49 +0200
+
 cfengine3 (3.6.0~12+nmu1) UNRELEASED; urgency=low
 
   * Finale release 3.6.0 
