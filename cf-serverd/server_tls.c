@@ -26,6 +26,8 @@
 #include <server_tls.h>
 #include <server_common.h>
 
+#include <openssl/err.h>                                   /* ERR_get_error */
+
 #include <crypto.h>                                        /* DecryptString */
 #include <conversion.h>
 #include <signals.h>
@@ -35,7 +37,7 @@
 #include <tls_generic.h>              /* TLSSend */
 #include <cf-serverd-enterprise-stubs.h>
 #include <connection_info.h>
-#include <string_lib.h>                                  /* StringMatchFull */
+#include <regex.h>                                       /* StringMatchFull */
 #include <known_dirs.h>
 #include <file_lib.h>                                           /* IsDirReal */
 

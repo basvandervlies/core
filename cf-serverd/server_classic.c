@@ -1,11 +1,14 @@
 #include <platform.h>
 
+#include <openssl/bn.h>                                         /* BN_* */
+
 #include <cf3.defs.h>
 #include <item_lib.h>                 /* IsMatchItemIn */
 #include <matching.h>                 /* IsRegexItemIn */
 #include <net.h>                      /* ReceiveTransaction,SendTransaction */
 #include <signals.h>
 #include <string_lib.h>                               /* ToLowerStrInplace */
+#include <regex.h>                                    /* StringMatchFull */
 #include <lastseen.h>                                 /* LastSaw1 */
 #include <files_hashes.h>                             /* HashString */
 #include <crypto.h>                                   /* HavePublicKey */
