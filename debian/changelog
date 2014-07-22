@@ -1,3 +1,10 @@
+cfengine3 (3.6.0~17+nmu1) UNRELEASED; urgency=low
+
+  *  Non-maintainer upload.
+  *  Merged 3.6.x branch 22 July 2014
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Tue, 22 Jul 2014 12:58:21 +0200
+
 cfengine3 (3.6.0~16+nmu1) UNRELEASED; urgency=low
 
   * New 3.6.x merge 16 july 2014
