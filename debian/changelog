@@ -1,3 +1,9 @@
+cfengine3 (3.6.2-1) UNRELEASED; urgency=low
+
+  * version 28 Aug, is 3.6.2 pre-release
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Thu, 28 Aug 2014 11:46:46 +0200
+
 cfengine3 (3.6.0~17+nmu1) UNRELEASED; urgency=low
 
   *  Non-maintainer upload.

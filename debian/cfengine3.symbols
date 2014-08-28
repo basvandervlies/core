@@ -283,6 +283,7 @@ libpromises.so.3 cfengine3 #MINVER#
  DeleteItemNotMatching@Base 3.6.1
  DeleteItemNotStarting@Base 3.6.1
  DeleteItemStarting@Base 3.6.1
+ DeleteRedundantSlashes@Base 3.6.2
  DeleteSlash@Base 3.6.1
  DetectDomainName@Base 3.6.1
  DetectEnvironment@Base 3.6.1
@@ -803,6 +804,7 @@ libpromises.so.3 cfengine3 #MINVER#
  MapRemove@Base 3.6.1
  MapSize@Base 3.6.1
  MapSoftDestroy@Base 3.6.1
+ MarkAsPolicyServer@Base 3.6.2
  MarkServerOffline@Base 3.6.1
  MasterfileExists@Base 3.6.1
  MeasurePolicyFromString@Base 3.6.1
