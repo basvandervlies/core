@@ -21,6 +21,7 @@
           (Redmine #6552)
         - Also enable shortcut keyword for cf-serverd classic protocol, eg to simplify the  bootstrap process for clients that have different sys.masterdir settings (Redmine #3697)
         - New failsafe.cf, uses shortcut masterfiles
+        - Validating of input files uses the wrong function, use GetInputDir instead of GetWorkDir
 
 3.6.1
         New features:
