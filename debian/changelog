@@ -1,3 +1,11 @@
+cfengine3 (3.6.2-3) UNRELEASED; urgency=low
+
+  * version 1 Sep, is 3.6.2 pre-release
+  * added version Shortcut to classic protocol
+  * validate input file must use GetInputDir instead of GetWorkdir
+
+ -- Bas van der Vlies <bas@test3.irc.sara.nl.irc.sara.nl>  Mon, 01 Sep 2014 10:19:21 +0200
+
 cfengine3 (3.6.2-1) UNRELEASED; urgency=low
 
   * version 28 Aug, is 3.6.2 pre-release
