@@ -970,6 +970,8 @@ libpromises.so.3 cfengine3 #MINVER#
  RefCountNew@Base 3.6.1
  RegisterAtExitFunction@Base 3.6.1
  ReleaseCriticalSection@Base 3.6.1
+ ReloadHAConfig@Base 3.6.2
+ ReloadHAConfig__stub@Base 3.6.2
  RemoteDirList@Base 3.6.1
  RemoteSysLog@Base 3.6.1
  RemoveAllExistingPolicyInInputs@Base 3.6.1
