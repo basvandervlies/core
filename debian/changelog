@@ -1,5 +1,11 @@
 cfengine3 (3.6.2-4) UNRELEASED; urgency=low
 
+  * Merged with cfengine core 3.6.x tree on 22 September, with a lot of SURFsara fixes, see below
+
+ -- Bas van der Vlies <bas.van.der.vlies@surfsara.nl>  Mon, 22 Sep 2014 16:43:27 +0200
+
+cfengine3 (3.6.2-4) UNRELEASED; urgency=low
+
   * Merged with cfengine core 3.6.x tree on 2 September, with a lot of SURFsara fixes, see below
 
  -- Bas van der Vlies <bas.van.der.vlies@surfsara.nl>  Wed, 03 Sep 2014 09:13:50 +0200
