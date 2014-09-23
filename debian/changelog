@@ -1,4 +1,4 @@
-cfengine3 (3.6.2-4) UNRELEASED; urgency=low
+cfengine3 (3.6.2-5) UNRELEASED; urgency=low
 
   * Merged with cfengine core 3.6.x tree on 22 September, with a lot of SURFsara fixes, see below
 
