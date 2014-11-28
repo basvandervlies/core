@@ -1,5 +1,7 @@
 # not a spelling error, the correct phrase is "offering these package-promise
 # suggestions to ..."
+# not a spelling error, the correct phrase is "offering these package-promise
+# suggestions to ..."
 cfengine3: spelling-error-in-binary usr/sbin/cf-agent these package this package
 cfengine3: package-name-doesnt-match-sonames libpromises3
 cfengine3: manpage-has-errors-from-man usr/share/man/man8/cf-agent.8.gz 33: warning: numeric expression expected (got `v')
