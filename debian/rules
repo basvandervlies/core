@@ -61,6 +61,7 @@ override_dh_install:
 	$(MAKE) DESTDIR=$(CURDIR)/debian/cfengine3 install
 	/bin/rmdir $(CURDIR)/debian/cfengine3/usr/sbin
 	/bin/mv $(CURDIR)/debian/cfengine3/usr/bin $(CURDIR)/debian/cfengine3/usr/sbin
+	/bin/cp $(CURDIR)/contrib/cf-locate/cf-locate $(CURDIR)/debian/cfengine3/usr/sbin
 
 	/bin/rmdir $(CURDIR)/debian/cfengine3/var/lib/cfengine3/inputs
 	/bin/rm $(CURDIR)/debian/cfengine3/usr/lib/*.la

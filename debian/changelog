@@ -1,3 +1,9 @@
+cfengine3 (3.6.3-2) UNRELEASED; urgency=low
+
+  * added cf-locate to install programs 
+
+ -- Bas van der Vlies <bas.van.der.vlies@surfsara.nl>  Wed, 03 Dec 2014 14:03:14 +0100
+
 cfengine3 (3.6.3-1) UNRELEASED; urgency=low
 
   * New cfengine 3.6.3 version
