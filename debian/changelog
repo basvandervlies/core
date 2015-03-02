@@ -1,3 +1,9 @@
+cfengine3 (3.6.5-1) UNRELEASED; urgency=low
+
+  * New upcoming 3.6.5 release, 3 march 2015
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Mon, 02 Mar 2015 13:38:59 +0100
+
 cfengine3 (3.6.3-2) UNRELEASED; urgency=low
 
   * added cf-locate to install programs 
