@@ -1,3 +1,10 @@
+cfengine3 (3.6.5-2) UNRELEASED; urgency=low
+
+  * Final 3.6.5 release
+  * merged Fri 13
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Fri, 13 Mar 2015 13:29:09 +0100
+
 cfengine3 (3.6.5-1) UNRELEASED; urgency=low
 
   * New upcoming 3.6.5 release, 3 march 2015
