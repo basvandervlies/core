@@ -1,3 +1,9 @@
+cfengine3 (3.6.6-1) UNRELEASED; urgency=low
+
+  * Imediate  3.6.6 release with backported if macro
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Thu, 07 May 2015 13:13:13 +0200
+
 cfengine3 (3.6.5-2) UNRELEASED; urgency=low
 
   * Final 3.6.5 release

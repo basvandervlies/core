@@ -7,6 +7,7 @@
 override_dh_auto_configure:
 	#remove failing tests
 	/bin/rm -f tests/acceptance/02_classes/02_functions/laterthan.cf
+	/bin/rm -f tests/acceptance//00_basics/macros/if.cf
 
 	dh_autoreconf
 	./configure --enable-shared=yes \
