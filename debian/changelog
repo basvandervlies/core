@@ -1,3 +1,9 @@
+cfengine3 (3.7.1-2) UNRELEASED; urgency=low
+
+  * Meregd 2 September with cfengine core branch
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Thu, 03 Sep 2015 14:30:30 +0200
+
 cfengine3 (3.7.1-1) UNRELEASED; urgency=low
 
   * Updated 3.7.X surfsara branch with latest patches
