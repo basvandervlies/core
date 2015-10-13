@@ -1,3 +1,9 @@
+cfengine3 (3.7.1-5) UNRELEASED; urgency=low
+
+  * Merged 12 October
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Mon, 12 Oct 2015 14:13:22 +0200
+
 cfengine3 (3.7.1-4) UNRELEASED; urgency=low
 
   * Merged version 28 September
