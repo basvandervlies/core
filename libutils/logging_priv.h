@@ -36,8 +36,18 @@ typedef char *(*LoggingPrivLogHook)(LoggingPrivContext *context, LogLevel level,
 struct LoggingPrivContext
 {
     LoggingPrivLogHook log_hook;
-
     void *param;
+
+    /**
+     * Generally the log_hook runs whenever the message is printed either to
+     * console or to syslog. You can set this to *additionally* run the hook
+     * when the message level is <= force_hook_level.
+     *
+     * @NOTE the default setting of 0 equals to CRIT level, which is good as
+     *       default since the CRIT messages are always printed anyway, so
+     *       the log_hook runs anyway.
+     */
+    LogLevel force_hook_level;
 };
 
 /**

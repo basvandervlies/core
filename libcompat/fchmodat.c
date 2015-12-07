@@ -22,30 +22,50 @@
   included file COSL.txt.
 */
 
+#include <platform.h>
+#include <misc_lib.h>
+#include <logging.h>
+#include <generic_at.h>
 
-#ifndef CFENGINE_TLS_GENERIC_H
-#define CFENGINE_TLS_GENERIC_H
+#include <fcntl.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <unistd.h>
 
+#ifndef __MINGW32__
 
-#include <cfnet.h>
+typedef struct
+{
+    const char *pathname;
+    mode_t mode;
+    int flags;
+} fchmodat_data;
 
-#include <openssl/ssl.h>
+static int fchmodat_inner(void *generic_data)
+{
+    fchmodat_data *data = generic_data;
+    if (data->flags & AT_SYMLINK_NOFOLLOW)
+    {
+        errno = ENOTSUP;
+        return -1;
+    }
 
-#include <logging.h>                                            /* LogLevel */
+    return chmod(data->pathname, data->mode);
+}
 
+static void cleanup(ARG_UNUSED void *generic_data)
+{
+}
 
-extern int CONNECTIONINFO_SSL_IDX;
+int fchmodat(int dirfd, const char *pathname, mode_t mode, int flags)
+{
+    fchmodat_data data = {
+        .pathname = pathname,
+        .mode = mode,
+        .flags = flags,
+    };
 
+    return generic_at_function(dirfd, &fchmodat_inner, &cleanup, &data);
+}
 
-bool TLSGenericInitialize(void);
-int TLSVerifyCallback(X509_STORE_CTX *ctx, void *arg);
-int TLSVerifyPeer(ConnectionInfo *conn_info, const char *remoteip, const char *username);
-X509 *TLSGenerateCertFromPrivKey(RSA *privkey);
-int TLSLogError(SSL *ssl, LogLevel level, const char *prepend, int code);
-int TLSSend(SSL *ssl, const char *buffer, int length);
-int TLSRecv(SSL *ssl, char *buffer, int toget);
-int TLSRecvLines(SSL *ssl, char *buf, size_t buf_size);
-void TLSSetDefaultOptions(SSL_CTX *ssl_ctx, const char *min_version);
-const char *TLSErrorString(intmax_t errcode);
-
-#endif
+#endif // !__MINGW32__
