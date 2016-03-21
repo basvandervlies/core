@@ -44,7 +44,7 @@ AC_CHECK_PROG(MAKEINFO, makeinfo, makeinfo)
 define([revision], m4_esyscmd_s([git rev-list -1 --abbrev-commit HEAD]))
 
 _AM_SET_OPTION([tar-ustar])
-AM_INIT_AUTOMAKE(cfengine, 3.7.2)
+AM_INIT_AUTOMAKE(cfengine, 3.7.3)
 AM_MAINTAINER_MODE([enable])
 
 AC_DEFINE(BUILD_YEAR, esyscmd([date +%Y | tr -d '\n']), "Software build year")
@@ -1108,16 +1108,16 @@ dnl #######################################################################
 dnl Enable extended attributes. Used for SELinux and ACLs
 dnl #######################################################################
 
-AC_CHECK_FUNCS(listxattr, [AC_DEFINE(WITH_XATTR, 1, [Define if you have a libc that supports extended attributes])])
+AC_CHECK_FUNCS(llistxattr, [AC_DEFINE(WITH_XATTR, 1, [Define if you have a libc that supports extended attributes])])
 AC_CHECK_HEADERS([attr/xattr.h sys/xattr.h])
 
 AC_MSG_CHECKING([whether xattr functions have extra arguments])
 AC_COMPILE_IFELSE([AC_LANG_PROGRAM([#include <sys/types.h>
                                     #include <sys/xattr.h>],
-                                    [(void)listxattr("", 0, 0, 0);
-                                    (void)getxattr("", "", 0, 0, 0, 0);
-                                    (void)setxattr("", "", "", 0, 0, 0);
-                                    (void)removexattr("", "", 0);])],
+                                    [(void)llistxattr("", 0, 0, 0);
+                                    (void)lgetxattr("", "", 0, 0, 0, 0);
+                                    (void)lsetxattr("", "", "", 0, 0, 0);
+                                    (void)lremovexattr("", "", 0);])],
                   [AC_DEFINE(WITH_XATTR_EXTRA_ARGS, 1, [Define if your xattr implementation has extra arguments])]
                   [AC_MSG_RESULT([yes])],
                   [AC_MSG_RESULT([no])])
@@ -1168,7 +1168,7 @@ case "$target_os" in
    aix*)
         CPPFLAGS="$CPPFLAGS -w"
         ;;
-   linux*|*bsd*gnu)
+   linux*|*bsd*|*gnu*)
         AC_CHECK_LIB(nss_nis, yp_get_default_domain)
         ;;
    freebsd*|dragonfly*)
@@ -1182,8 +1182,6 @@ case "$target_os" in
    qnx*)
         ;;
    openbsd*|obsd*)
-        ;;
-   gnu*)
         ;;
    sysv4.2MP|unix_sv*)
         ;;
