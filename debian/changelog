@@ -1,3 +1,9 @@
+cfengine3 (3.7.3-1) UNRELEASED; urgency=low
+
+  *  New version 3.7.3 merged 11 April 2016 
+
+ -- Bas van der Vlies <bas@install2.lisa.surfsara.nl>  Mon, 11 Apr 2016 12:02:36 +0200
+
 cfengine3 (3.7.2-1) UNRELEASED; urgency=low
 
   * Merged 7 December
