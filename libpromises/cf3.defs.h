@@ -75,6 +75,7 @@
 #define CF_MACROALPHABET 61     /* a-z, A-Z plus a bit */
 #define CF_ALPHABETSIZE 256
 #define CF_SAMEMODE 7777
+/* CF_SAME_OWNER/GROUP should be -1; chown(-1) doesn't change ownership. */
 #define CF_SAME_OWNER ((uid_t)-1)
 #define CF_UNKNOWN_OWNER ((uid_t)-2)
 #define CF_SAME_GROUP ((gid_t)-1)
@@ -1094,7 +1095,7 @@ typedef struct
     char *chdir;
     char *chroot;
     int preview;
-    int nooutput;
+    bool nooutput;
     int timeout;
 } ExecContain;
 
