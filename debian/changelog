@@ -1,3 +1,9 @@
+cfengine3 (3.7.5-1) UNRELEASED; urgency=medium
+
+  * Import performance patch
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Fri, 19 Aug 2016 17:21:02 +0200
+
 cfengine3 (3.7.4-1) UNRELEASED; urgency=medium
 
   * New version will becomme 3.7.4 2 mei 2016
