@@ -2350,7 +2350,8 @@ static PromiseResult VerifyName(EvalContext *ctx, char *path, const struct stat 
                      *       Log(LOG_LEVEL_INFO, "Moved '%s' to repository location '%s'", file, destination)
                      *       but we should do LogChange() instead. (maybe just add 'char **destination'
                      *       argument to the function?) */
-                    unlink(changes_newname);
+                    /* HvB */
+                    unlink(newname);
                 }
             }
             else
